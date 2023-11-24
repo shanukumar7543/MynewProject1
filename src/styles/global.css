@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* outline: 1px solid red; */
+}
+a {
+  /* @apply text-blue-700; */
+}
+
+a:hover {
+  /* @apply border-b-2 border-blue-700; */
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+.content p {
+  @apply my-6;
+}
+
+.content ul {
+  @apply my-6;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.zoom-in-animation {
+  animation-name: zoomIn;
+  animation-duration: 1.5s; /* You can adjust the duration as needed */
+  background-color: white;
+}
+
+@keyframes rightleft {
+  from {
+    /* transform: scale(0.5); */
+    opacity: 0;
+    right: -20%;
+  }
+  to {
+    /* transform: scale(1); */
+    opacity: 1;
+    right: 0%;
+  }
+}
+.right-left-rightleft {
+  animation-name: rightleft;
+  animation-duration: 1.5s; /* You can adjust the duration as needed */
+  background-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 100px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 20px;
+  border: 2px solid #f1f1f1;
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+}
+
+#nprogress .bar {
+  background: red !important;
+  height: 2px !important;
+  border-right-radius: 100% !important;
+  background-opacity: 0.5 !important;
+  filter: blur(1px) !important;
+}
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.2s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.2s ease-in-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(attr(animate-y-distance));
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(attr(animate-y-distance));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
